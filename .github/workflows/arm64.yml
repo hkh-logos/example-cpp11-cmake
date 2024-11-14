@@ -21,16 +21,13 @@ jobs:
           sudo apt install -y build-essential cmake # Add any additional dependencies
           sudo apt install -y gcovr
           sudo apt install -y lcov
+
       # Compile the program
       - name: Build the Program
         run: |
           mkdir -p build && cd build
-
-        # Configure
           cmake -DCODE_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug ..
-        # Build (for Make on Unix equivalent to `make -j $(nproc)`)
           cmake --build . --config Debug -- -j $(nproc)
-        # Test
 
       # Run unit tests
       - name: Run Unit Tests
