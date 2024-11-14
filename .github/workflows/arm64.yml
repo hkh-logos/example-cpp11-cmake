@@ -1,0 +1,47 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    # Specify an ARM64 runner
+    runs-on: ubuntu-22.04
+    arch: arm64
+
+    steps:
+      # Checkout the code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Install necessary build dependencies (example for C/C++)
+      - name: Install Dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y build-essential cmake # Add any additional dependencies
+          sudo apt install -y gcovr
+          sudo apt install -y lcov
+      # Compile the program
+      - name: Build the Program
+        run: |
+          mkdir -p build && cd build
+
+        # Configure
+          cmake -DCODE_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug ..
+        # Build (for Make on Unix equivalent to `make -j $(nproc)`)
+          cmake --build . --config Debug -- -j $(nproc)
+        # Test
+
+      # Run unit tests
+      - name: Run Unit Tests
+        run: |
+          cd build
+          ctest -j $(nproc) --output-on-failure
+      
+      - name: Code coverage
+        run: |
+          cd build
+          lcov --capture --directory . --output-file coverage.info
+          lcov --remove coverage.info '/usr/*' --output-file coverage.info # filter system-files
+          lcov --list coverage.info # debug info
+          bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Codecov did not collect
