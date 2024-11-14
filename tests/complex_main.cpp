@@ -9,6 +9,8 @@ int main() {
 
 	std::cout << a.getReal() << " " << a.getImag() << " " << a.abs() << std::endl;
 	std::cout << b.getReal() << " " << b.getImag() << " " << b.abs() << std::endl;
+	std::cout << c.getReal() << " " << c.getImag() << " " << c.abs() << std::endl;
+	std::cout << c.getReal() << " " << c.getImag() << " " << c.abs() << std::endl;
 	std::cout << c.getReal() << " " << c.getImag() << " " << c.abs() << std::endl; 
 
 	return 0;
