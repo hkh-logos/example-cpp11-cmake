@@ -1,11 +1,11 @@
 # [Codecov][1] CI CMake g++ cpp11 lcov Example
-[![Travis CI logo][travis-image]][travis-link]
+
 [![Codecov logo][codecov-image]][codecov-link]
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcodecov%2Fexample-cpp11-cmake.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcodecov%2Fexample-cpp11-cmake?ref=badge_shield)
 
-[![Build Status][travis-badge]][travis-link]
+
 [![codecov][codecov-badge]][codecov-link]
-[![MIT License][license-badge]](LICENSE.md)
+
 
 The goal of this project is to build project with following tools:
  * C++ version: `C++11`
