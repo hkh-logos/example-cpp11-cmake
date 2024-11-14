@@ -7,7 +7,7 @@ jobs:
   build-and-test:
     # Specify an ARM64 runner
     runs-on: ubuntu-22.04
-    arch: arm64
+    
 
     steps:
       # Checkout the code
