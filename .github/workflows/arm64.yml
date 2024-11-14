@@ -36,11 +36,12 @@ jobs:
           ctest -j $(nproc) --output-on-failure
       
       - name: Code coverage
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: |
           cd build
           lcov --capture --directory . --output-file coverage.info
           lcov --remove coverage.info '/usr/*' --output-file coverage.info # filter system-files
           lcov --list coverage.info # debug info
           bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Codecov did not collect"
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+        
