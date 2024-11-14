@@ -1,8 +1,6 @@
 # [Codecov][1] CI CMake g++ cpp11 lcov Example
 
 [![Codecov logo][codecov-image]][codecov-link]
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcodecov%2Fexample-cpp11-cmake.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcodecov%2Fexample-cpp11-cmake?ref=badge_shield)
-
 
 [![codecov][codecov-badge]][codecov-link]
 
