@@ -1,5 +1,5 @@
 coverage:
- default_rules: # the rules that will be followed for any flag added, generally
+  default_rules: # the rules that will be followed for any flag added, generally
     carryforward: true
     status:
       project:
@@ -8,8 +8,6 @@ coverage:
           threshold: 50%
   individual_flags: # exceptions to the default rules above, stated flag by flag
     - name: unittests  #fill in your own flag name
-      #paths: 
-      #- src/feature_1  #fill in your own path. Note, accepts globs, not regexes
       carryforward: true
       statuses:
         - type: project
