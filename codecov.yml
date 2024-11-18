@@ -1,0 +1,26 @@
+coverage:
+    status:
+      project:
+        default:
+          target: 100%
+          threshold: 50%
+        unittests:
+          target: 50%
+
+comment:
+  layout:  "diff, flags, files"
+  behavior: default
+  require_changes: false  
+  require_base: yes
+  require_head: yes       
+  branches: null
+
+# New root YAML section = `flags:`
+# This is where you would define every flag from your
+# uploader, and update when new Flags added
+
+flags:
+  unittests:
+    paths: #note, accepts globs, not regexes
+      - src/*
+    carryforward: false
