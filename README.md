@@ -2,6 +2,8 @@
 
 [![codecov](https://codecov.io/gh/hkh-logos/example-cpp11-cmake/graph/badge.svg?token=ANGEF4BKMY)](https://codecov.io/gh/hkh-logos/example-cpp11-cmake)
 
+https://codecov.io/gh/hkh-logos/example-cpp11-cmake/graphs/sunburst.svg?token=ANGEF4BKMY
+
 The goal of this project is to build project with following tools:
  * C++ version: `C++11`
  * Build system: [`CMake`](https://cmake.org/)
