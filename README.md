@@ -1,9 +1,6 @@
 # [Codecov][1] CI CMake g++ cpp11 lcov Example
 
-[![Codecov logo][codecov-image]][codecov-link]
-
-[![codecov][codecov-badge]][codecov-link]
-
+[![codecov](https://codecov.io/gh/hkh-logos/example-cpp11-cmake/graph/badge.svg?token=ANGEF4BKMY)](https://codecov.io/gh/hkh-logos/example-cpp11-cmake)
 
 The goal of this project is to build project with following tools:
  * C++ version: `C++11`
