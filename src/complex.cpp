@@ -1,4 +1,6 @@
 #include "complex.hpp"
+#include <iostream>
+using namespace std;
 
 Complex::Complex(double _real, double _imaginary) {
 	this->real = _real;
@@ -32,3 +34,4 @@ double Complex::getImag() const {
 double Complex::abs() const {
 	return sqrt(this->real * this->real + this->imaginary * this->imaginary);
 }
+

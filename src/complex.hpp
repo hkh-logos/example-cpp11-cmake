@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <cmath>
+#include <string>
+#include <vector>
 
 /**
  * @file complex.hpp
@@ -29,5 +31,20 @@ public:
 	double getImag() const;
 	double abs() const;
 };
+
+
+// 1. Function to calculate factorial (Recursive)
+int factorial(int n);
+
+// 2. Function to reverse a string
+std::string reverseString(const std::string& str);
+
+// 3. Function to find the maximum element in an array
+int findMax(const std::vector<int>& arr);
+
+// 4. Function to check if a number is prime
+bool isPrime(int n);
+
+std::vector<int> generateFibonacci(int n);
 
 #endif // _SRC_COMPLEX_HPP_
